@@ -30,3 +30,4 @@ Bantu Lab é uma plataforma inovadora projetada para atender às necessidades de
 - npm (ou yarn)
 
 ### Readme em construção 🚧
+...
