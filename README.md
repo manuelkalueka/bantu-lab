@@ -1,30 +1,30 @@
-# React + TypeScript + Vite
+# BANTU LAB - Plataforma Online para Artistas e Produtores Musicais
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bantu Lab é uma plataforma inovadora projetada para atender às necessidades de produtores musicais e artistas, oferecendo uma experiência completa desde a reserva de estúdios até o recebimento das versões finais das músicas.
 
-Currently, two official plugins are available:
+## Funcionalidades Principais
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 1. Gerenciamento de Sessões de Estúdio
+  - Agendamento de Sessões: Permite aos artistas agendar sessões de gravação em estúdios disponíveis.
+  - Edição e Atualização: Os usuários podem editar e atualizar detalhes de suas sessões.
+  - Status das Sessões: Visualização do status atual de cada sessão agendada.
+- 2. Prévia e Feedback de Músicas
+  - Ouvir Prévia: Os artistas podem ouvir uma prévia de suas músicas diretamente na plataforma.
+  - Feedback: Sistema de feedback onde artistas podem opinar sobre as prévias recebidas.
+- 3. Versão Final e Download
+  - Recebimento de Arquivos: Após aprovação, os artistas recebem a versão final de suas músicas.
+  - Download Seguro: As músicas finalizadas podem ser baixadas diretamente pela plataforma.
 
-## Expanding the ESLint configuration
+## Tecnologias Utilizadas
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- Frontend: React
+- Backend: Node.js
+- Banco de Dados: MongoDB
+- Estilização: Styled-components
 
-- Configure the top-level `parserOptions` property like this:
+## Instalação e Configuração
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+### Requisitos
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- Node.js
+- npm (ou yarn)
