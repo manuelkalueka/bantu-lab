@@ -1,17 +1,16 @@
 import { createGlobalStyle } from "styled-components";
-import { Theme } from "./Theme";
 
 export const GlobalStyle = createGlobalStyle`
   @font-face {
-    font-family: 'Montserrat';
-    src: url('../assets/fonts/Montserrat/Montserrat-Regular.ttf') format('ttf');
+    font-family: 'Plus Jakarta Sans';
+    src: url('../assets/fonts/plus-jakarta-sans/PlusJakartaSans-VariableFont_wght.ttf') format('ttf');
     font-weight: 400;
     font-style: normal;
   }
 
   @font-face {
-    font-family: 'Lato';
-    src: url('../assets/fonts/Lato/Lato-Regular.ttf') format('ttf');
+    font-family: 'Inter';
+    src: url('../assets/fonts/inter/Inter-VariableFont_slnt,wght.ttf') format('ttf');
     font-weight: 400;
     font-style: normal;
   }
@@ -19,7 +18,6 @@ export const GlobalStyle = createGlobalStyle`
   * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     text-decoration: none;
     list-style: none;
     box-sizing:border-box;
@@ -37,15 +35,25 @@ a {
   color: inherit;
 }
 
+button, input{
+  border:0;
+  outline:0;
+  font-family: ${({ theme }) => theme.fonts.main};
+}
+
 html,
-body{
-  font-family: ${Theme.fonts.secondary}, sans-serif;
+body,
+#root{
+  font-family: ${({ theme }) => theme.fonts.main};
+  height: 100%;
+  width: 100%;
 }
 body {
-  font-size:${Theme.sizes.bodyText};
-  color:${Theme.colors.neutras.dark};
-  width: 100vw;
   height: 100vh;
+  width: 100vw;
+  font-size:${({ theme }) => theme.sizes.bodyText};
+  color:${({ theme }) => theme.colors.neutras.dark};
+  background-color:${({ theme }) => theme.colors.neutras.smothDark}
 }
 
 @media (max-width: 1200px) {

@@ -2,7 +2,9 @@ import { DefaultTheme } from "styled-components";
 
 const Theme: DefaultTheme = {
   colors: {
-    main: "#003366",
+    main: "#57a9fb",
+    main_dark: "#003366",
+    main_light: "#9dceff",
     secondary: "#FFA500",
     neutras: {
       white: "#fff",
@@ -10,6 +12,7 @@ const Theme: DefaultTheme = {
       mediumGray: "#ccc",
       darkGray: "#333",
       black: "#000",
+      smothDark: "rgb(26,26,30)",
       dark: "#343a40",
       danger: "#dc3545",
       warning: "#ffc107",
@@ -31,13 +34,13 @@ const Theme: DefaultTheme = {
     bodyText: "16px",
   },
   input: {
-    height: "2.5rem",
-    padding: ["0.625", "0.75rem"],
+    height: "3rem",
+    padding: ["0.625rem", "0.75rem"],
     font_size: "1rem",
   },
   fonts: {
-    main: "Montserrat",
-    secondary: "Lato",
+    main: "Inter, sans-serif",
+    secondary: "Plus Jakarta Sans, sans-serif",
   },
 
   //   Extra pequeno (mobile): < 576px
@@ -52,7 +55,7 @@ const Theme: DefaultTheme = {
     large: "43.75rem",
   },
 
-  //   Padding: 16px
+  // Padding: 16px
   // Border-radius: 8px
   // Sombra: 0 4px 8px rgba(0, 0, 0, 0.1)
 };

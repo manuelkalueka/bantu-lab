@@ -11,17 +11,20 @@ declare module "styled-components" {
     colors: {
       main: string;
       secondary: string;
+      main_dark: string;
+      main_light: string;
       neutras: {
         white: string;
         lightGray: string;
         mediumGray: string;
         darkGray: string;
+        smothDark: string;
         black: string;
         dark: string;
-        danger:string;
-        warning:string;
-        success:string;
-        info:string;
+        danger: string;
+        warning: string;
+        success: string;
+        info: string;
       };
     };
     sizes: {
