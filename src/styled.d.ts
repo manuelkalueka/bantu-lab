@@ -17,6 +17,7 @@ declare module "styled-components" {
         white: string;
         lightGray: string;
         mediumGray: string;
+        gray: string;
         darkGray: string;
         smothDark: string;
         black: string;
@@ -38,6 +39,7 @@ declare module "styled-components" {
     fonts: {
       main: string;
       secondary: string;
+      fantasy: string;
     };
     modals: {
       small: string;

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import LoginBackGroudImage from "../assets/img/man-in-studio.png";
 
 export const MainContainer = styled.div`
   height: 100%;
@@ -9,10 +10,14 @@ export const MainContainer = styled.div`
 export const Wrapper = styled.div`
   height: 100%;
   width: 70%;
+  background-image: url(${LoginBackGroudImage});
   background-color: ${({ theme }) => theme.colors.main_dark};
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 `;
 
-export const WrapperLogin = styled(Wrapper)`
+export const WrapperLogin = styled.div`
   height: 100%;
   width: 30%;
   background-color: ${({ theme }) => theme.colors.neutras.smothDark};
@@ -28,7 +33,13 @@ export const FormContainer = styled.section`
 `;
 
 export const SignupContainer = styled.section`
-  margin: 15% 0;
-  width: 75%;
-  color: ${({ theme }) => theme.colors.neutras.white};
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: calc(0.625rem * 2);
+`;
+
+export const SignupWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
 `;

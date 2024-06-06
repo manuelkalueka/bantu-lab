@@ -15,15 +15,15 @@ export const GlobalStyle = createGlobalStyle`
     font-style: normal;
   }
 
-  * {
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-    list-style: none;
-    box-sizing:border-box;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
 
-  html {
+html {
   font-size: 100%; /* 16px */
 }
 
@@ -38,6 +38,9 @@ a {
 button, input{
   border:0;
   outline:0;
+}
+
+button, input, a{
   font-family: ${({ theme }) => theme.fonts.main};
 }
 

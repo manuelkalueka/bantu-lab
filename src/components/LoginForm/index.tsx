@@ -36,6 +36,7 @@ const LoginForm: React.FC = () => {
         {...register("username")}
         placeholder="Seu nome de usuário"
         id="username"
+        autoComplete="username webauthn"
       />
       <TextErrorStyled>{errors.username?.message}</TextErrorStyled>
       <LabelFormStyled htmlFor="password">Senha</LabelFormStyled>
@@ -44,10 +45,13 @@ const LoginForm: React.FC = () => {
         placeholder="Sua Senha"
         type="password"
         id="password"
+        autoComplete="current-password webauthn"
       />
       <TextErrorStyled>{errors.password?.message}</TextErrorStyled>
-      <ForgetPasswordLink>Esqueci minha senha</ForgetPasswordLink>
-      <ButtonFormStyled type="submit">Enviar</ButtonFormStyled>
+      <ForgetPasswordLink href="#" target="_self">
+        Esqueci minha senha
+      </ForgetPasswordLink>
+      <ButtonFormStyled type="submit">Entrar</ButtonFormStyled>
     </LoginFormStyled>
   );
 };

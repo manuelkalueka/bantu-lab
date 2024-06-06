@@ -9,10 +9,11 @@ const Theme: DefaultTheme = {
     neutras: {
       white: "#fff",
       lightGray: "#f5f5f5",
-      mediumGray: "#ccc",
+      gray: "#ccc",
+      mediumGray: "#c4c4cc",
       darkGray: "#333",
-      black: "#000",
-      smothDark: "rgb(26,26,30)",
+      black: "#121214",
+      smothDark: "#1a1a1e",
       dark: "#343a40",
       danger: "#dc3545",
       warning: "#ffc107",
@@ -39,8 +40,9 @@ const Theme: DefaultTheme = {
     font_size: "1rem",
   },
   fonts: {
-    main: "Inter, sans-serif",
-    secondary: "Plus Jakarta Sans, sans-serif",
+    main: "'Inter', sans-serif",
+    secondary: "'Plus Jakarta Sans', sans-serif",
+    fantasy: "'Iceland', sans-serif",
   },
 
   //   Extra pequeno (mobile): < 576px
