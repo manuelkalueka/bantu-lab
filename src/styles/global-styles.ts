@@ -59,25 +59,25 @@ body {
   background-color:${({ theme }) => theme.colors.neutras.smothDark}
 }
 
-@media (max-width: 1200px) {
+@media screen and (max-width: 1200px) {
   html {
     font-size: 93.75%; /* 15px */
   }
 }
 
-@media (max-width: 992px) {
+@media screen and (max-width: 992px) {
   html {
     font-size: 87.5%; /* 14px */
   }
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   html {
     font-size: 81.25%; /* 13px */
   }
 }
 
-@media (max-width: 576px) {
+@media screen and (max-width: 576px) {
   html {
     font-size: 75%; /* 12px */
   }

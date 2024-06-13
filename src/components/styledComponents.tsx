@@ -38,6 +38,7 @@ export const ButtonFormStyled = styled.button`
   }
   transition: filter 500ms ease-in-out;
 `;
+
 export const LabelFormStyled = styled.label`
   padding-bottom: 0.625rem;
   color: ${({ theme }) => theme.colors.neutras.gray};
@@ -70,12 +71,16 @@ export const ForgetPasswordLink = styled(Link)`
   padding: 0.625rem 0;
   margin-bottom: 1.5rem;
   cursor: pointer;
-  width: 50%;
+  width: 55%;
   &:hover {
     color: ${({ theme }) => theme.colors.main_light};
   }
 
   transition: color 0.5s ease-in-out;
+
+  @media (max-width: 425px) {
+    width: 100%;
+  }
 `;
 
 export const Title = styled.h1`
@@ -126,6 +131,11 @@ export const SignupLink = styled(Link)`
     filter: brightness(1.1);
   }
   transition: filter 500ms ease-in-out;
+
+  @media (max-width: 425px) {
+    font-size:1.2rem;
+  }
+  
 `;
 export const TextSignup = styled(Text)`
   color: ${({ theme }) => theme.colors.main};

@@ -15,6 +15,18 @@ export const Wrapper = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+
+  @media (min-width: 1200px) and (max-width: 1448px) {
+    width: 60%;
+  }
+
+  @media (max-width: 1200px) {
+    width: 55%;
+  }
+
+  @media (max-width: 964px) {
+    width: 0%;
+  }
 `;
 
 export const WrapperLogin = styled.div`
@@ -23,13 +35,25 @@ export const WrapperLogin = styled.div`
   background-color: ${({ theme }) => theme.colors.neutras.smothDark};
   display: flex;
   justify-content: center;
+  flex: 1 1 0%;
+
+  @media (max-width: 1100px) {
+    width: 100%;
+  }
 `;
 
 export const FormContainer = styled.section`
   margin: 15% 0;
+  padding-left: 15%;
+  padding-right: 15%;
   max-width: 100%;
-  width: 75%;
+  width: 100%;
   color: ${({ theme }) => theme.colors.neutras.white};
+
+  @media (max-width: 768px) {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
 `;
 
 export const SignupContainer = styled.section`
