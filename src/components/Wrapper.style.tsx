@@ -48,11 +48,17 @@ export const FormContainer = styled.section`
   padding-right: 15%;
   max-width: 100%;
   width: 100%;
+  max-height: 100%;
+  overflow-y: auto;
   color: ${({ theme }) => theme.colors.neutras.white};
 
   @media (max-width: 768px) {
     padding-left: 10%;
     padding-right: 10%;
+  }
+
+  @media (max-width: 964px) {
+    margin: 5% 0;
   }
 `;
 

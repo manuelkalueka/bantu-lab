@@ -6,7 +6,6 @@ import {
   SignupContainer,
   SignupWrapper,
 } from "../../components/Wrapper.style";
-import LoginForm from "../../components/LoginForm";
 import {
   LogoBantuLab,
   LogoBantuLabContainer,
@@ -18,10 +17,11 @@ import {
 } from "../../components/styledComponents";
 import BantuLogo from "../../assets/img/logo-vector.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleRight, faUserPlus } from "@fortawesome/free-solid-svg-icons";
+import { faAngleRight, faSignIn } from "@fortawesome/free-solid-svg-icons";
 import { Theme } from "../../styles/Theme";
+import SignupForm from "../../components/SignupForm";
 
-const Login: React.FC = () => {
+const Signup: React.FC = () => {
   return (
     <MainContainer>
       <Wrapper />
@@ -31,19 +31,19 @@ const Login: React.FC = () => {
             <LogoBantuLab src={BantuLogo} alt="Logo da Bantu Lab" />
             <Text>BANTU LAB</Text>
           </LogoBantuLabContainer>
-          <Subtitle>Acesse sua Conta</Subtitle>
-          <LoginForm />
+          <Subtitle>Inscreva-se Gratuitamente</Subtitle>
+          <SignupForm />
           <SeparatorElement />
-          <SignupLink href="/signup">
+          <SignupLink href="/login">
             <SignupWrapper>
               <FontAwesomeIcon
-                icon={faUserPlus}
+                icon={faSignIn}
                 color={Theme.colors.main}
                 fontSize={20}
               />
               <SignupContainer>
-                <Text>Não tem uma conta?</Text>
-                <TextSignup>Se inscreva gratuitamente</TextSignup>
+                <Text>Já possue uma conta?</Text>
+                <TextSignup>Entre na Plataforma</TextSignup>
               </SignupContainer>
             </SignupWrapper>
             <FontAwesomeIcon
@@ -59,4 +59,4 @@ const Login: React.FC = () => {
   );
 };
 
-export default Login;
+export default Signup;

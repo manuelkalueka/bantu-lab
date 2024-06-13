@@ -133,9 +133,16 @@ export const SignupLink = styled(Link)`
   transition: filter 500ms ease-in-out;
 
   @media (max-width: 425px) {
-    font-size:1.2rem;
+    font-size: 1.2rem;
   }
-  
+`;
+
+export const HightlightLink = styled(Link)`
+  color: ${({ theme }) => theme.colors.main};
+  &:hover {
+    color: ${({ theme }) => theme.colors.main_light};
+  }
+  transition: color 500ms ease-in-out;
 `;
 export const TextSignup = styled(Text)`
   color: ${({ theme }) => theme.colors.main};

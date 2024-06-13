@@ -10,6 +10,10 @@ import {
   LoginFormStyled,
   TextErrorStyled,
 } from "../../components/styledComponents";
+import { loginService } from "../../services/users";
+
+import Swal from "sweetalert2";
+import withReactContent from "sweetalert2-react-content";
 
 const schema = yup
   .object({
@@ -20,6 +24,8 @@ const schema = yup
 type FormData = yup.InferType<typeof schema>;
 
 const LoginForm: React.FC = () => {
+  const MySwal = withReactContent(Swal);
+
   const {
     register,
     handleSubmit,
@@ -27,7 +33,33 @@ const LoginForm: React.FC = () => {
   } = useForm<FormData>({
     resolver: yupResolver(schema),
   });
-  const onSubmit = (data: FormData) => console.log(data);
+  const onSubmit = async (data: FormData) => {
+    try {
+      const response = await loginService(data);
+      if (response?.status === 200) {
+        MySwal.fire({
+          title: "Sucesso!",
+          text: "Seja Bem Vindo",
+          icon: "success",
+          confirmButtonText: "OK",
+        });
+      } else {
+        MySwal.fire({
+          title: "Erro",
+          text: "Verifique os dados de acesso",
+          icon: "error",
+          confirmButtonText: "OK",
+        });
+      }
+    } catch (error) {
+      MySwal.fire({
+        title: "Erro",
+        text: "Erro ao entrar na conta.",
+        icon: "error",
+        confirmButtonText: "OK",
+      });
+    }
+  };
 
   return (
     <LoginFormStyled onSubmit={handleSubmit(onSubmit)}>
@@ -48,7 +80,7 @@ const LoginForm: React.FC = () => {
         autoComplete="current-password webauthn"
       />
       <TextErrorStyled>{errors.password?.message}</TextErrorStyled>
-      <ForgetPasswordLink href="#" target="_self">
+      <ForgetPasswordLink href="/forget-password" target="_self">
         Esqueci minha senha
       </ForgetPasswordLink>
       <ButtonFormStyled type="submit">Entrar</ButtonFormStyled>
